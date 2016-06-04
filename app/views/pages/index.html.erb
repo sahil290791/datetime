@@ -1,6 +1,7 @@
 Form:
 <%= simple_form_for Page.new do |f| %>
 	<div class="form-group" style="position:relative;" >
+		<label>Select Start Date:</label>
 		<%= f.text_field :start_date ,as: :date_picker, :label => "When do you expect to finish?" %>
 	</div>
 <% end %>
