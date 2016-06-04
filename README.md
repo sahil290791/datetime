@@ -39,8 +39,30 @@ rails generate datetimepicker_rails:install
 - Initialize the plugin, by specifying the date format:
 ```js
 $('#datetimepicker1').datetimepicker({
-    format: "DD-MM-YYYY" // I have only specified date, month and year as I do not want time selector in the widget
+    format: "DD-MM-YYYY" ,// I have only specified date, month and year as I do not want time selector in the widget
     // Use the same format to parse time in Rails before saving
+    icons: {// add bootstrap icons
+            time: 'glyphicon glyphicon-time',
+            date: 'glyphicon glyphicon-calendar',
+            up: 'glyphicon glyphicon-chevron-up',
+            down: 'glyphicon glyphicon-chevron-down',
+            previous: 'glyphicon glyphicon-chevron-left',
+            next: 'glyphicon glyphicon-chevron-right',
+            today: 'glyphicon glyphicon-screenshot',
+            clear: 'glyphicon glyphicon-trash',
+            close: 'glyphicon glyphicon-remove'
+        }
+        //or
+     icons: {//or add fontawesome icons
+        time: 'fa fa-clock',
+        date: 'fa fa-calendar',
+        up: 'fa fa-chevron-up',
+        down: 'fa fa-chevron-down',
+        previous: 'fa fa-chevron-left',
+        next: 'fa fa-chevron-right',
+        clear: 'fa fa-trash',
+        close: 'fa fa-times'
+    }
 });
 ```
 - Format the date in any format before saving:
