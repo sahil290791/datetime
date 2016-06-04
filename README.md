@@ -30,7 +30,7 @@ rails generate datetimepicker_rails:install
 
 ```
 <div class='input-group date' id='datetimepicker1'>
-	<%%= f.text_field :start_date ,as: :date_picker, :label => "When do you expect to finish?", class: 'form-control' %>
+	<%= f.text_field :start_date ,as: :date_picker, :label => "When do you expect to finish?", class: 'form-control' %>
     <span class="input-group-addon">
         <span class="glyphicon glyphicon-calendar"></span>
     </span>
