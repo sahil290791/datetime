@@ -7,11 +7,11 @@ gem 'momentjs-rails', '>= 2.9.0',  :github => 'derekprior/momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 ```
 - Do bundle install and run the generator:
-```
+```rails
 rails generate datetimepicker_rails:install
 ```
 - Copy the following lines in application.js, it should look like this:
-```
+```ruby
 //= require jquery
 //= require jquery_ujs
 //= require moment
@@ -21,7 +21,7 @@ rails generate datetimepicker_rails:install
 //= require_tree .
 ```
 - Copy the following lines in applicaiton.css, it should look like this:
-```
+```ruby
 *= require_tree .
 *= require bootstrap-datetimepicker.min
 *= require_self
@@ -37,14 +37,14 @@ rails generate datetimepicker_rails:install
 </div>
 ```
 - Initialize the plugin, by specifying the date format:
-```
+```js
 $('#datetimepicker1').datetimepicker({
     format: "DD-MM-YYYY" // I have only specified date, month and year as I do not want time selector in the widget
     // Use the same format to parse time in Rails before saving
 });
 ```
 - Format the date in any format before saving:
-```
+```rails
 <%= Date.strptime(@date,"%d-%m-%Y") %>
 # Use the same date format used in javascript while initializing and then later change it to any format before saving
 ```
