@@ -46,4 +46,5 @@ $('#datetimepicker1').datetimepicker({
 - Format the date in any format before saving:
 ```
 <%= Date.strptime(@date,"%d-%m-%Y") %>
-# Use
+# Use the same date format used in javascript while initializing and then later change it to any format before saving
+```
