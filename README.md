@@ -36,3 +36,14 @@ rails generate datetimepicker_rails:install
     </span>
 </div>
 ```
+- Initialize the plugin, by specifying the date format:
+```
+$('#datetimepicker1').datetimepicker({
+    format: "DD-MM-YYYY" // I have only specified date, month and year as I do not want time selector in the widget
+    // Use the same format to parse time in Rails before saving
+});
+```
+- Format the date in any format before saving:
+```
+<%= Date.strptime(@date,"%d-%m-%Y") %>
+# Use
